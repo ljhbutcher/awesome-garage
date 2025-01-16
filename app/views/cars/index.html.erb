@@ -1,0 +1,7 @@
+<div class="cards">
+  <% @cars.each do |car| %>
+    <div class="card-category" style="background-image: url(<%= car.image_url %>)">
+      <%= link_to "#{car.brand} #{car.model} - #{car.year}", car_path(car), class: 'text-link' %>
+    </div>
+  <% end %>
+</div>
