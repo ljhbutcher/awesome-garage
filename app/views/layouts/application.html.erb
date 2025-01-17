@@ -11,8 +11,13 @@
   </head>
 
   <body>
-    <%= render 'layouts/navbar' %>
-    <%= render 'layouts/banner' %>
-    <%= yield %>
-  </body>
+      <%= render 'layouts/navbar' %> <% unless controller_name == 'cars' && action_name == 'show' %>
+      <% unless controller_name == 'favourites' && action_name == 'index' %>
+      <%= render 'layouts/banner' %>
+      <% end %>
+      <% end %>
+      <%= yield %>
+    </body>
+
+
 </html>
