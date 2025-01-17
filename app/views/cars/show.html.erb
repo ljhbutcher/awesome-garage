@@ -21,3 +21,9 @@
     <%= f.button :submit, "Submit Review", class: "btn btn-primary" %>
   </div>
 <% end %>
+
+<h3>Favourites</h3>
+
+<%= simple_form_for @car do |f| %>
+  <%= f.button :submit, "Add to my garage", class: "btn btn-primary" %>
+<% end %>
